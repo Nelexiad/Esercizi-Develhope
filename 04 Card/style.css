@@ -1,0 +1,28 @@
+.wrap-card {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    border: 1px solid black;
+    width: 40vw;
+    max-width: 100vw;
+
+
+
+
+}
+
+
+figure {
+
+    margin: 0;
+}
+
+
+.avatar-image {
+    height: 300px;
+    width: 100%;
+    max-width: 100%;
+}
