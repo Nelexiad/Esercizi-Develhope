@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Esercizio 5</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="get">
+      <fieldset>
+        <legend>I tuoi dati</legend>
+         <div>
+          <label for="user_name">Nome <abbr title="necessario">*</abbr></label>
+          <input type="text" name="user_name" id="user_name" required placeholder="Mario" pattern="[A-Za-z]+">
+          <label for="user_surname">Cognome <abbr title="necessario">*</abbr></label>
+          <input type="text" name="user_surname" id="user_surname" required placeholder="Rossi" pattern="[A-Za-z]+" >
+         </div>
+        <div>
+          <label for="user_email">E-mail<abbr title="necessario">*</abbr></label>
+         <input type="email" name="user_email" id="user_email" placeholder="your@mail.com" 
+         required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+         <label for="user_pass">Password <abbr title="necessario">*</abbr></label>
+         <input type="password" name="user_pass" id="user_pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+         <small>deve contenere almeno 8 lettere,una Maiscuola e un numero</small>
+        </div>
+         <label for="birthday">La tua Data di nascita <abbr title="necesssario">*</abbr></label>
+         <input type="date" name="birthday" id="birthday" required>
+         <label for="phone_number">Numero cellulare</label>
+         <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+         <small>Formato: 123-456-7890</small>
+         <br>
+         <br>
+         <br>
+         <div>
+          <label for="abbonamento">Scegli il tuo piano d'abbonamento mensile</label>
+         <select name="abbonamento" id="abbonamento" required>
+          <option value="Bronzo">Bronzo 5£/mese</option>
+          <option value="Argento">Argento 10£/mese</option>
+          <option value="Oro">Oro 15£mese</option>
+         </div>        
+         </select>
+         <br>
+         <br>
+         <div>
+         <input type="checkbox">
+         <small>Per entrare a fare parte del Programma Pro</small>
+         </div>
+      </fieldset>
+      <fieldset>
+        <legend>Carta di credito</legend>
+         <label for="card_number">Numero Carta <abbr title="necessario">*</abbr></label>
+          <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" required  name="card_number" id="card_number" 
+          placeholder="xxxx-xxxx-xxxx-xxxx"> 
+          <small><input type="tel" name="cvc" id="cvc" required placeholder="xxx" pattern="[0-9]{3}"></small>
+          <small>CVC <abbr title="necessario">*</abbr></small>
+          <label for="expiration">Data scadenza <abbr title="necessario">*</abbr></label>
+          <input type="month" name="expiration" id="expiration" required>
+          <label for="fatturazione">Indirizzo di fatturazione <abbr title="necessario">*</abbr></label>
+          <input type="text" name="fatturazione" id="fatturazione" required>
+          <button type="submit">Iscriviti</button>
+        
+       </fieldset>
+    </form>
+  </body>
+</html>
