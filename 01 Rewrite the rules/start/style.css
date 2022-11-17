@@ -1,0 +1,18 @@
+:root {
+    --customwidth: 150px;
+    --customheight: 150px;
+    --custombcbody: #1dd4d4;
+    --custombcball: #00ff2a;
+    --customborderradius: 65px;
+}
+
+body {
+    background-color: var(--custombcbody);
+}
+
+.ball {
+    width: var(--customwidth);
+    height: var(--customheight);
+    background-color: var(--custombcball);
+    border-radius: var(--customborderradius);
+}
