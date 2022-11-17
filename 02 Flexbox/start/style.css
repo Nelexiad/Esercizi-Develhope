@@ -1,0 +1,65 @@
+html,
+.container,
+body,
+aside {
+    height: 100%;
+}
+
+.aside {
+    display: flex;
+    width: 200px;
+    height: 100%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: yellowgreen;
+    width: inherit;
+    justify-content: space-around;
+
+    align-items: center;
+
+
+}
+
+
+
+
+
+.username {
+    font-size: 30px;
+    position: relative;
+    top: 40px;
+
+}
+
+.avatar {
+    font-size: 30px;
+    position: relative;
+    top: 40px;
+    left: 10px;
+
+}
+
+.side-bar-link {
+    color: #2b2b2b;
+    font-weight: bold;
+}
+
+.side-bar-link:hover {
+    color: #2b2bb2;
+    transition: all 0.3s;
+}
+
+
+
+.link-account:hover {
+    color: #2b2bb2;
+    transition: all 0.3s;
+}
+
+.link-account {
+
+    color: #2b2b2b;
+}
