@@ -1,0 +1,133 @@
+html {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    color: purple;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+
+}
+
+section {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 0.8fr);
+    background-color: grey;
+    justify-content: center;
+    grid-template-rows: repeat(6, 0.8fr);
+    border: 2px solid black;
+    border-radius: 8px;
+
+
+
+}
+
+
+
+
+
+
+.tot {
+    grid-column: 1/5;
+    grid-row: 1;
+}
+
+.piu {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.uguale {
+    grid-column: 4;
+    grid-row-start: 3;
+    grid-row-end: 7;
+}
+
+.meno {
+    grid-column: 2;
+}
+
+.tot,
+.piu,
+.meno,
+.per,
+.diviso,
+.sette,
+.otto,
+.nove,
+.uguale,
+.quattro,
+.cinque,
+.sei,
+.sette,
+.uno,
+.due,
+.tre,
+.zero,
+.punto,
+.ac {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 24px;
+    border: 1px lightgrey;
+    border-style: solid;
+
+}
+
+.tot {
+    justify-content: flex-end;
+    margin-right: 30px;
+    border: none;
+    font-size: 35px;
+    color: violet;
+    background-color: black;
+}
+
+.uguale {
+    background-color: violet;
+}
+
+.piu,
+.meno,
+.per,
+.diviso {
+    background-color: rgb(26, 26, 26);
+}
+
+.sette,
+.otto,
+.nove,
+.quattro,
+.cinque,
+.sei,
+.uno,
+.due,
+.tre,
+.zero,
+.punto,
+.ac {
+    background-color: rgb(97, 95, 96);
+}
+
+.ac {
+    font-size: 40px;
+}
