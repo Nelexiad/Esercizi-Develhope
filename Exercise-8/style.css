@@ -1,0 +1,63 @@
+html {
+  width: 100%;
+  height: 100%;
+
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+
+
+}
+
+section {
+  padding: 2em;
+  margin: 1em;
+}
+
+#green {
+  background-color: #8ffda7;
+  order: 3;
+
+
+}
+
+#orange {
+  background-color: #ffc788;
+  order: 4;
+  width: 40%;
+
+
+
+}
+
+#yellow {
+  background-color: #ffff92;
+  order: 1;
+}
+
+#red {
+  background-color: #ff919c;
+  order: 2;
+}
+
+#blue {
+  background-color: #98d2ff;
+  order: 5;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  padding: 1em;
+  display: block;
+  margin: 1em;
+}
