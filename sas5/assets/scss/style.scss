@@ -1,0 +1,214 @@
+@use "sass:math";
+@use "sass:color";
+@import "mixins";
+@import "functions";
+@import "variables";
+@import "flowcontrol";
+
+
+
+
+
+
+
+
+html {
+    @include flex;
+}
+
+html {
+    font-size: 16px
+}
+
+html {
+    body {
+        @include flex;
+        font-size: remconverter(21);
+    }
+}
+
+html {
+    body {
+        div {
+            @include flex;
+            flex-direction: column;
+        }
+    }
+}
+
+html {
+    body {
+        div {
+            section {
+                @include flex
+            }
+        }
+    }
+}
+
+html {
+    body {
+        div {
+            section {
+                article {
+                    @include box($color: $tertiary)
+                }
+            }
+        }
+    }
+}
+
+html {
+    body {
+        div {
+            section {
+                article {
+                    @include flex
+                }
+            }
+        }
+    }
+}
+
+html {
+    body {
+        div {
+            section {
+                article {
+                    p {
+                        @include flex
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+
+article:nth-child(n+1):nth-child(-n+5) {
+    color: $secondary;
+}
+
+article:nth-child(n+2):nth-child(-n+5) {
+    color: $primary;
+}
+
+article:nth-child(n+3):nth-child(-n+5) {
+    color: $secondary;
+}
+
+article:nth-child(n+4):nth-child(-n+5) {
+    color: $primary;
+}
+
+body {
+    border: 1px solid red;
+    padding-bottom: 50px;
+}
+
+section {
+    padding: 0px 10px;
+}
+
+
+
+#last-section {
+    padding-top: 20px;
+    width: 100%;
+
+
+
+
+}
+
+article {
+    &#last-article {
+        border-color: $secondary;
+        width: 98%;
+        color: $tertiary;
+    }
+}
+
+h2 {
+    @extend h1;
+}
+
+body {
+    div {
+        h2 {
+            text-decoration: none;
+            padding: 1rem;
+            border: 1px solid $primary;
+        }
+    }
+}
+
+.number {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+
+
+
+    div {
+        border: 1px solid $primary;
+        width: remconverter(45);
+        height: remconverter(45);
+        margin-top: 8px;
+    }
+}
+
+.number {
+    div {
+        div {
+            border: none;
+            padding: 0px;
+            width: 1px;
+
+
+
+        }
+    }
+}
+
+
+@for $index from 1 to 20 {
+    .num-#{$index} {
+        background-color: color.adjust(white, $lightness: calc($index * -5%));
+        color: color.adjust(black, $lightness: calc($index * 5%));
+
+        @if $index==10 {
+            background-color: blue;
+            color: red;
+        }
+
+
+    }
+
+
+}
+
+
+
+@for $index from 1 to 4 {
+    .fs-#{$index}rem {
+        font-size: $index+rem;
+
+        @if $index==1 {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        @else if $index==2 {
+            align-items: flex-start;
+        }
+
+        @else if $index==3 {
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+    }
+
+}

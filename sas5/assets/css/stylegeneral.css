@@ -1,0 +1,227 @@
+div h1, div h2 {
+  color: green;
+  text-decoration: underline blue;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 16px;
+}
+
+html body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3125rem;
+}
+
+html body div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+html body div section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html body div section article {
+  border: 1px solid green;
+  height: 100px;
+}
+
+html body div section article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html body div section article p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article:nth-child(n+1):nth-child(-n+5) {
+  color: blue;
+}
+
+article:nth-child(n+2):nth-child(-n+5) {
+  color: red;
+}
+
+article:nth-child(n+3):nth-child(-n+5) {
+  color: blue;
+}
+
+article:nth-child(n+4):nth-child(-n+5) {
+  color: red;
+}
+
+body {
+  border: 1px solid red;
+  padding-bottom: 50px;
+}
+
+section {
+  padding: 0px 10px;
+}
+
+#last-section {
+  padding-top: 20px;
+  width: 100%;
+}
+
+article#last-article {
+  border-color: blue;
+  width: 98%;
+  color: green;
+}
+
+body div h2 {
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid red;
+}
+
+.number {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+.number div {
+  border: 1px solid red;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin-top: 8px;
+}
+
+.number div div {
+  border: none;
+  padding: 0px;
+  width: 1px;
+}
+
+.num-1 {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+
+.num-2 {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+
+.num-3 {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+
+.num-4 {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+.num-5 {
+  background-color: #bfbfbf;
+  color: #404040;
+}
+
+.num-6 {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+
+.num-7 {
+  background-color: #a6a6a6;
+  color: #595959;
+}
+
+.num-8 {
+  background-color: #999999;
+  color: #666666;
+}
+
+.num-9 {
+  background-color: #8c8c8c;
+  color: #737373;
+}
+
+.num-10 {
+  background-color: gray;
+  color: gray;
+  background-color: blue;
+  color: red;
+}
+
+.num-11 {
+  background-color: #737373;
+  color: #8c8c8c;
+}
+
+.num-12 {
+  background-color: #666666;
+  color: #999999;
+}
+
+.num-13 {
+  background-color: #595959;
+  color: #a6a6a6;
+}
+
+.num-14 {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+
+.num-15 {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+
+.num-16 {
+  background-color: #333333;
+  color: #cccccc;
+}
+
+.num-17 {
+  background-color: #262626;
+  color: #d9d9d9;
+}
+
+.num-18 {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+
+.num-19 {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.fs-1rem {
+  font-size: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.fs-2rem {
+  font-size: 2rem;
+  align-items: flex-start;
+}
+
+.fs-3rem {
+  font-size: 3rem;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+/*# sourceMappingURL=stylegeneral.css.map */
