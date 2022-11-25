@@ -1,0 +1,94 @@
+div h1, div h2 {
+  color: green;
+  text-decoration: underline blue;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 1.3125rem;
+}
+
+html body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html body div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+html body div section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html body div section article {
+  border: 1px solid green;
+  height: 100px;
+}
+
+html body div section article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html body div section article p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article:nth-child(n+1):nth-child(-n+5) {
+  color: blue;
+}
+
+article:nth-child(n+2):nth-child(-n+5) {
+  color: red;
+}
+
+article:nth-child(n+3):nth-child(-n+5) {
+  color: blue;
+}
+
+article:nth-child(n+4):nth-child(-n+5) {
+  color: red;
+}
+
+body {
+  border: 1px solid red;
+  padding-bottom: 50px;
+}
+
+section {
+  padding: 0px 10px;
+}
+
+#last-section {
+  padding-top: 20px;
+  width: 100%;
+}
+
+article#last-article {
+  border-color: blue;
+  width: 98%;
+  color: green;
+}
+
+body div h2 {
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid red;
+}
+
+/*# sourceMappingURL=stylegeneral.css.map */

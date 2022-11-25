@@ -1,0 +1,20 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin box($color) {
+    border: 1px solid $color;
+    height: 100px;
+
+
+}
+
+div {
+    h1 {
+        color: green;
+        text-decoration: underline blue;
+    }
+}
