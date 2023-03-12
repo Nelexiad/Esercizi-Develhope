@@ -1,0 +1,16 @@
+.welcome {
+  background-color: beige;
+  border: 1px solid saddlebrown;
+}
+.login-button-red {
+  background-color: red;
+}
+
+.login-button-green {
+  background-color: green;
+}
+.container {
+  background-color: white;
+  border: 3px solid red;
+  padding: 20px;
+}
