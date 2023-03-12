@@ -1,6 +1,6 @@
 import React from "react";
 
-const Welcome = ({ name = "Danilo" }) => {
+const Welcome = ({ name = "Giorgia" }) => {
   return <p>Welcome, {name}</p>;
 };
 
