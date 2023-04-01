@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../dist/server.js");
+import app from "./app";
 
 describe("GET /", () => {
   it("responds with a JSON message", async () => {
