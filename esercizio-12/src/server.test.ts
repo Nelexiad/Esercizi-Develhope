@@ -1,3 +1,11 @@
-test("test", () => {
-  expect(true).toBe(true);
+const request = require("supertest");
+const app = require("../dist/server.js");
+
+describe("GET /", () => {
+  it("responds with a JSON message", async () => {
+    const response = await request(app).get("/");
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({ itWorks: "true" });
+    expect(response.header["content-type"]).toMatch(/json/);
+  });
 });
