@@ -2,13 +2,16 @@
   "name": "esercizio-12",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "jest",
     "format": "prettier -write .",
     "build": "tsc",
     "lint": "eslint . --fix --cache",
-    "dev": "npx nodemon dist/server.js"
+    "start:dev": " nodemon --watch dist/server.js",
+    "dev": "npm run build && concurrently 'npm:build:dev' 'npm:start:dev'",
+    "build:dev": "tsc --watch",
+    "start": "node --enable-source-maps dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,7 @@
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
+    "concurrently": "^8.0.1",
     "dotenv": "^16.0.3",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
