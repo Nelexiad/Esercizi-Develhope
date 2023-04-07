@@ -19,7 +19,10 @@ app.get("/cryptos", async (req, res) => {
 });
 
 app.post("/cryptos", validate({ body: cryptoSchema }), async (req, res) => {
-  const crypto: CryptoData = await req.body;
+  const cryptoData: CryptoData = await req.body;
+  const crypto = await prisma.crypto.create({
+    data: cryptoData,
+  });
   res.status(201).json(crypto);
 });
 
