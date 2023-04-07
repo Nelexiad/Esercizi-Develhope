@@ -31,6 +31,21 @@ app.post("/cryptos", (0, validation_1.validate)({ body: validation_1.cryptoSchem
     });
     res.status(201).json(crypto);
 });
+app.put("/cryptos/:id(\\d+)", (0, validation_1.validate)({ body: validation_1.cryptoSchema }), async (req, res, next) => {
+    const cryptoId = Number(req.params.id);
+    const cryptoData = await req.body;
+    try {
+        const crypto = await client_1.default.crypto.update({
+            where: { id: cryptoId },
+            data: cryptoData,
+        });
+        res.status(200).json(crypto);
+    }
+    catch (error) {
+        res.status(404);
+        next(`Cannot PUT crypto:${cryptoId}`);
+    }
+});
 app.use(validation_1.validationErrorMiddleware);
 exports.default = app;
 //# sourceMappingURL=app.js.map

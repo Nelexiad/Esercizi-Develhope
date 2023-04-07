@@ -41,6 +41,26 @@ app.post("/cryptos", validate({ body: cryptoSchema }), async (req, res) => {
   res.status(201).json(crypto);
 });
 
+app.put(
+  "/cryptos/:id(\\d+)",
+  validate({ body: cryptoSchema }),
+  async (req, res, next) => {
+    const cryptoId = Number(req.params.id);
+    const cryptoData: CryptoData = await req.body;
+
+    try {
+      const crypto = await prisma.crypto.update({
+        where: { id: cryptoId },
+        data: cryptoData,
+      });
+      res.status(200).json(crypto);
+    } catch (error) {
+      res.status(404);
+      next(`Cannot PUT crypto:${cryptoId}`);
+    }
+  }
+);
+
 app.use(validationErrorMiddleware);
 
 export default app;
