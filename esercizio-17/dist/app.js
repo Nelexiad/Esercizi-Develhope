@@ -46,6 +46,19 @@ app.put("/cryptos/:id(\\d+)", (0, validation_1.validate)({ body: validation_1.cr
         next(`Cannot PUT crypto:${cryptoId}`);
     }
 });
+app.delete("/cryptos/:id(\\d+)", async (req, res, next) => {
+    const cryptoId = Number(req.params.id);
+    try {
+        const crypto = await client_1.default.crypto.delete({
+            where: { id: cryptoId },
+        });
+        res.status(204).end();
+    }
+    catch (error) {
+        res.status(404);
+        next(`Cannot delete crypto:${cryptoId}`);
+    }
+});
 app.use(validation_1.validationErrorMiddleware);
 exports.default = app;
 //# sourceMappingURL=app.js.map

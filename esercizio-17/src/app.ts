@@ -61,6 +61,24 @@ app.put(
   }
 );
 
+app.delete(
+  "/cryptos/:id(\\d+)",
+
+  async (req, res, next) => {
+    const cryptoId = Number(req.params.id);
+
+    try {
+      const crypto = await prisma.crypto.delete({
+        where: { id: cryptoId },
+      });
+      res.status(204).end();
+    } catch (error) {
+      res.status(404);
+      next(`Cannot delete crypto:${cryptoId}`);
+    }
+  }
+);
+
 app.use(validationErrorMiddleware);
 
 export default app;
