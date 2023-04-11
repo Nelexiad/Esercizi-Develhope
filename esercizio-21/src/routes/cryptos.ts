@@ -17,13 +17,13 @@ const upload = initMulterMiddleware();
 
 const router = Router()
 
-router.get("/", async (req, res) => {
+router.get("/cryptos", async (req, res) => {
     const cryptos = await prisma.crypto.findMany();
   
     res.json(cryptos);
   });
   
-  router.get("/:id(\\d+)", async (req, res, next) => {
+  router.get("/cryptos/:id(\\d+)", async (req, res, next) => {
     const cryptoId = Number(req.params.id);
   
     const crypto = await prisma.crypto.findUnique({
@@ -38,7 +38,7 @@ router.get("/", async (req, res) => {
     res.json(crypto);
   });
   
-  router.post("/", validate({ body: cryptoSchema }), async (req, res) => {
+  router.post("/cryptos", validate({ body: cryptoSchema }), async (req, res) => {
     const cryptoData: CryptoData = await req.body;
     const crypto = await prisma.crypto.create({
       data: cryptoData,
@@ -47,7 +47,7 @@ router.get("/", async (req, res) => {
   });
   
   router.post(
-    "/:id(\\d+)/photo",
+    "/cryptos/:id(\\d+)/photo",
     upload.single("photo"),
     async (req, res, next) => {
       if (!req.file) {
@@ -62,7 +62,7 @@ router.get("/", async (req, res) => {
   );
   
   router.put(
-    "/:id(\\d+)",
+    "/cryptos/:id(\\d+)",
     validate({ body: cryptoSchema }),
     async (req, res, next) => {
       const cryptoId = Number(req.params.id);
@@ -82,7 +82,7 @@ router.get("/", async (req, res) => {
   );
   
   router.delete(
-    "/:id(\\d+)",
+    "/cryptos/:id(\\d+)",
   
     async (req, res, next) => {
       const cryptoId = Number(req.params.id);
