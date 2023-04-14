@@ -15,5 +15,7 @@ model Crypto{
   name    String  @db.VarChar(255)
   value   Int
   createdAt   DateTime  @default(now())
+  createdBy String? @db.VarChar(255)
   updatedAt   DateTime  @updatedAt
+  updatedBy String? @db.VarChar(255)
 }

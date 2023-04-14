@@ -1,19 +1,16 @@
 import express from "express";
 import "express-async-errors";
+
 import { passport } from "./lib/middleware/passport";
 import { initCorsMiddleware } from "./lib/middleware/cors";
-
 import { initMulterMiddleware } from "./lib/middleware/multer";
-
 import { initSessionMiddleware } from "./lib/middleware/session";
-const upload = initMulterMiddleware();
+import { validationErrorMiddleware } from "./lib/middleware/validation";
 
-import {
-  validate,
-  CryptoData,
-  cryptoSchema,
-  validationErrorMiddleware,
-} from "./lib/validation";
+import cryptosRoutes from "./routes/cryptos";
+import authRoutes from "./routes/auth";
+
+const upload = initMulterMiddleware();
 
 const app = express();
 
@@ -24,6 +21,9 @@ app.use(passport.session());
 app.use(initCorsMiddleware());
 
 app.use(express.json());
+
+app.use("/cryptos", cryptosRoutes);
+app.use("/auth", authRoutes);
 
 app.use(validationErrorMiddleware);
 
